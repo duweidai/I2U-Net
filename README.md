@@ -2,4 +2,7 @@
 
 ### Data preparation
 resize datasets to 224*224 and saved it in npy format.
+```
 python data_preprocess.py
+```
+
