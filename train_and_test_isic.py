@@ -490,7 +490,7 @@ if __name__ == '__main__':
     assert LooseVersion(torch.__version__) >= LooseVersion('0.4.0'), 'PyTorch>=0.4.0 is required'
     parser = argparse.ArgumentParser(description='Comprehensive attention network for biomedical Dataset')
     
-    parser.add_argument('--id', default="I2U_Net_S",
+    parser.add_argument('--id', default="I2U_Net_L",
                         help='I2U_Net')                                                   # Select a loaded model name
 
     # Path related arguments
@@ -510,13 +510,13 @@ if __name__ == '__main__':
     parser.add_argument('--seed', type=int, default=1234, help='random seed')               # default 1234
     parser.add_argument('--save_img', type=str, default=False, help='whether save segmentation result')
     
-    parser.add_argument('--root_ph2', default='/home/gpu2/10t_disk/ddw/TMI_0720_code/ISIC_main/PH2_npy_224_320',
+    parser.add_argument('--root_ph2', default='/home/gpu2/10t_disk/ddw/TMI_0720_code/ISIC_main/PH2_npy_224_224',
                         help='root directory of external validation')                                      # storage path of ph2 data
-    parser.add_argument('--root_ph2_list', default='/home/gpu2/10t_disk/ddw/TMI_0720_code/ISIC_main/PH2_npy_224_320/ph2_list.txt',
+    parser.add_argument('--root_ph2_list', default='/home/gpu2/10t_disk/ddw/TMI_0720_code/ISIC_main/PH2_npy_224_224/ph2_list.txt',
                         help='image list of external validation')                                          # storage path of ph2 samples list   
     
     # optimization related arguments
-    parser.add_argument('--epochs', type=int, default=2, metavar='N',
+    parser.add_argument('--epochs', type=int, default=250, metavar='N',
                         help='number of epochs to train (default: 10)')
     parser.add_argument('--start_epoch', default=0, type=int,
                         help='epoch to start training. useful if continue from a checkpoint')
