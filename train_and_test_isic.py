@@ -520,7 +520,7 @@ if __name__ == '__main__':
                         help='number of epochs to train (default: 10)')
     parser.add_argument('--start_epoch', default=0, type=int,
                         help='epoch to start training. useful if continue from a checkpoint')
-    parser.add_argument('--batch_size', type=int, default=24, metavar='N',              
+    parser.add_argument('--batch_size', type=int, default=8, metavar='N',              
                         help='input batch size for training (default: 12)')                 # batch_size
     parser.add_argument('--lr_rate', type=float, default=1e-4, metavar='LR',
                         help='learning rate (default: 0.001)')                              # default=1e-4                            
