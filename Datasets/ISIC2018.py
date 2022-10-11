@@ -37,6 +37,8 @@ class ISIC2018_dataset(Dataset):
     def __getitem__(self, item: int):
         image = np.load(self.folder[item])
         label = np.load(self.mask[item])
+        label[label<125] = 0
+        label[label>=125] = 255
         name = self.folder[item].split('/')[-1]
 
         sample = {'image': image, 'label': label}
